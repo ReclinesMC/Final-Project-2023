@@ -4,6 +4,7 @@
 
 import os
 import time as t
+
 import gui
 import saving
 
@@ -21,7 +22,6 @@ def main():
     os.system('clear')
     t.sleep(0.1)
     gui.introducePlayer()
-
 
 
 if __name__ == "__main__":

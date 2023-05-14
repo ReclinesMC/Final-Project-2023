@@ -1,6 +1,7 @@
-import map
 import os
 import time as t
+
+import map
 import map as m
 
 header = "The Dragon Trail".center(50, " ")
@@ -50,22 +51,19 @@ def gameplay():
 
 
 def actionMenu(currentRoom):
-  inRoom = True
-  while inRoom:
-    print("What would you like to do?")
-    print("1. Look around")
-    print("2. Move to the next room")
-    print("3. Open the shop")
-    choice = input(">")
-    if choice == "1":
-      currentRoom.search()
+    inRoom = True
+    while inRoom:
+        print("What would you like to do?")
+        print("1. Look around")
+        print("2. Move to the next room")
+        print("3. Open the shop")
+        choice = input(">")
+        if choice == "1":
+            currentRoom.search()
 
-    elif choice == "2":
-      pass
-      
-      
-    elif choice == "3":
-      pass
-    
-    
-  
+        elif choice == "2":
+            pass
+
+
+        elif choice == "3":
+            pass
