@@ -1,0 +1,9 @@
+/venv
+/.git
+/.config
+/__pycache__
+.replit
+replit.nix
+/.upm
+poetry.lock
+pyproject.toml
