@@ -9,7 +9,7 @@ header = "The Dragon Trail".center(50, " ")
 
 def introducePlayer():
     path = ""
-    delay = 0.7
+    delay = 0
     print("You are a young adventurer")
     t.sleep(delay)
     print("Your goal is to defeat the evil dragon")

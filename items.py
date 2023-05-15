@@ -1,3 +1,14 @@
+
+# Coins are used to buy items from the shop
+# Pearls are used to buy rare items from the shop
+# Stars are used to boost your max HP
+# Rubies are used to boost your damage
+# Potion of health heals yourself
+# Potion of strength boosts your strength
+# Cooked ostrich heals yourself
+# Pepperonis heal yourself
+
+
 class Treasure:
     pass
 

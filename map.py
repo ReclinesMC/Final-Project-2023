@@ -6,6 +6,16 @@ import gui
 
 mapLayout = []
 
+# for each map have a list of items
+# weapons = [crystal ball, angry mushroom, pencil, kitten, flaming sword]
+# Consumables = [health potion, strength potion, cooked ostrich, pepperonis]
+# Treasure = [coin, pearl, star, ruby]
+
+# In treasure rooms player will have a high chance of treasure, normal chance consumables, low chance weapons
+# In empty rooms player will have a medium chance of consumables, no chance treasure, no chance weapons
+# In dungeon rooms player will have a high chance of weapons, normal chance consumables, low chance weapons
+
+
 
 class Map:
     def __init__(self, difficulty=1):

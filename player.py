@@ -1,5 +1,19 @@
 import weapons
+import map
 
+# Player will have an amount of coins and pearls
+# Player will have strength and health
+# Inventory will contian weapons, consumables, stars, and rubies, NOT coins or pearls
+# Player will have a weapon equipped
+# Player will have a name
+# Location of the player will always be map.mapLayout[0]
+# Player needs a method for taking damage and handling death
+# Player needs a method for attacking
+# Player needs a method for picking up items
+# Player needs a method for using items
+# Player needs a method for equipping weapon (will uneqip current weapon)
+# Player needs a method for buying items
+#
 
 class Person:
     def __init__(self):
