@@ -1,6 +1,8 @@
 import os
 import random as r
 import time as t
+import weapons
+import items
 
 import gui
 
@@ -15,6 +17,12 @@ mapLayout = []
 # In empty rooms player will have a medium chance of consumables, no chance treasure, no chance weapons
 # In dungeon rooms player will have a high chance of weapons, normal chance consumables, low chance weapons
 
+def percentChance(num, amount=1):
+  randomNum = r.randint(0, 100)
+  if num < randomNum:
+    return True
+  else:
+    return False
 
 
 class Map:
@@ -48,6 +56,17 @@ class Rooms:
     def enter(self):
         gui.actionMenu(self)
 
+    def search(self):
+      weaponz = [weapons.CrystalBall(), weapons.AngryMushroom(), weapons.Kitten(), weapons.Pencil()]
+      consumables = [items.HealthPot(), items.StrengthPot(), items.CookedOstrich(), items.Pepperoni()]
+      treasure = [items.Coin(), items.Pearl(), items.Star(), items.Ruby()]
+      if self.room == "Dungeon":
+        loot = []
+        weaponCount = r.randint(1,2)
+        consumeCount = r.randint(0, 1)
+        treasureChance = r.randint()
+        for i in 
+      
     def __repr__(self):
         return str(self.room)
 

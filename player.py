@@ -38,6 +38,7 @@ class Person:
     def takeDamage(self, damage, enemy):
         print("{enemy} attacked you for {damage} damage")
         self.health -= damage
+    
 
 
 Player = Person()

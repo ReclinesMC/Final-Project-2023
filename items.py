@@ -1,4 +1,5 @@
 
+
 # Coins are used to buy items from the shop
 # Pearls are used to buy rare items from the shop
 # Stars are used to boost your max HP
@@ -9,9 +10,7 @@
 # Pepperonis heal yourself
 
 
-class Treasure:
-    pass
-
+# Treasure
 
 class Coin:
     def __str__(self):
@@ -43,3 +42,34 @@ class Ruby:
 
     def __repr__(self):
         return "Ruby"
+
+# Consumables
+
+class HealthPot:
+  def __str__(self):
+    return "Gives 50 HP"
+    
+  def __repr__(self):
+    return "Health Potion"
+
+
+class StrengthPot:
+  def __str__(self):
+    return "Gives 10 Strength"
+    
+  def __repr__(self):
+    return "Strength Potion"
+
+class CookedOstrich:
+  def __str__(self):
+    return "Gives 20 HP"
+
+  def __repr__(self):
+    return "Cooked Ostrich"
+
+class Pepperoni:
+  def __str__(self):
+    return "Gives 10 HP"
+    
+  def __repr__(self):
+    return "A delicious snack"
