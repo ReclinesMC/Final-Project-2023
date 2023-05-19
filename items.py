@@ -1,4 +1,4 @@
-
+import weapons
 
 # Coins are used to buy items from the shop
 # Pearls are used to buy rare items from the shop
@@ -73,3 +73,7 @@ class Pepperoni:
     
   def __repr__(self):
     return "A delicious snack"
+
+weaponz = [weapons.CrystalBall(), weapons.AngryMushroom(), weapons.Kitten(), weapons.Pencil()]
+consumables = [HealthPot(), StrengthPot(), CookedOstrich(), Pepperoni()]
+treasure = [Coin(), Pearl(), Star(), Ruby()]

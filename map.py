@@ -57,15 +57,15 @@ class Rooms:
         gui.actionMenu(self)
 
     def search(self):
-      weaponz = [weapons.CrystalBall(), weapons.AngryMushroom(), weapons.Kitten(), weapons.Pencil()]
-      consumables = [items.HealthPot(), items.StrengthPot(), items.CookedOstrich(), items.Pepperoni()]
-      treasure = [items.Coin(), items.Pearl(), items.Star(), items.Ruby()]
       if self.room == "Dungeon":
         loot = []
         weaponCount = [percentChance(50), percentChance(50)]
         consumeCount = percentChance(50)
         treasureChance = percentChance(30)
-        for i in 
+        if weaponCount[0]:
+          pass
+          
+          
       
     def __repr__(self):
         return str(self.room)
