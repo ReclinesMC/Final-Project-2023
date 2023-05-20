@@ -4,15 +4,14 @@ class Enemies:
         self.modifier = modifier
 
     def startBattle(self):
-      
 
     def __str__(self):
         return str(self.type)
 
 
 class Phoenix(Enemies):
-  pass
+    pass
+
 
 class Demon(Enemies):
-  pass
-
+    pass

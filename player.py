@@ -1,5 +1,5 @@
 import weapons
-import map
+
 
 # Player will have an amount of coins and pearls
 # Player will have strength and health
@@ -38,7 +38,6 @@ class Person:
     def takeDamage(self, damage, enemy):
         print("{enemy} attacked you for {damage} damage")
         self.health -= damage
-    
 
 
 Player = Person()

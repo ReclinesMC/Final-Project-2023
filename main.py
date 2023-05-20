@@ -17,8 +17,8 @@ def main():
     print("A text adventure game".center(60))
     adminPass = input("\n" + "Press ENTER to start your journey".center(60) + "\n".center(60))
     if adminPass == "SSB0aGluayBiZWluZyBhbiBhZG1pbiBpcyB2ZXJ5IGNvb2wgZG9uJ3QgeW91PyBBZG1pbnMgZ2V0IGFsbCB0aGUgcGVybXMgYW5kIHRoZXkgY2FuIGRvIGFueXRoaW5nIHRoZXkgd2FudC4gSSBsb3ZlIGJlaW5nIGFuIGFkbWluLg==":
-      global admin
-      admin = True
+        global admin
+        admin = True
     os.system('clear')
     saving.checkSave()
     t.sleep(0.2)
