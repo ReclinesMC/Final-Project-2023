@@ -74,8 +74,12 @@ class Rooms:
         elif self.room == "Empty":
             self.loot = [percentChance(50, r.choice(items.consumables)), percentChance(10, r.choice(items.treasure)),
                          percentChance(10, r.choice(items.weaponz))]
+        for i in self.loot:
+            if False in self.loot:
+                self.loot.remove(False)
 
     def __repr__(self):
+
         return str(self.room)
 
 

@@ -8,6 +8,7 @@ import time as t
 import gui
 import saving
 
+admin = False
 
 # If you see t.sleep(0.1) its to fix the screen clearing bug with trinket
 

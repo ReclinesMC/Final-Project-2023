@@ -7,19 +7,18 @@ import map as m
 header = "{ Dragon Trail }".center(50, "~") + "\n"
 
 
-class Shop:
-    def __init__(self):
-        os.system("clear")
-        t.sleep(0.1)
+def Shop():
+    os.system("clear")
+    t.sleep(0.1)
+    print(header)
+    print("Welcome to the shop!")
+    t.sleep(1)
+    inShop = True
+    while inShop:
         print(header)
-        print("Welcome to the shop!")
-        t.sleep(1)
-        inShop = True
-        while inShop:
-            print(header)
-            print("What would you like to buy?")
-            print("This feature will be implemented later")
-            t.sleep(2)
+        print("What would you like to buy?")
+        print("This feature will be implemented later")
+        t.sleep(2)
 
 
 def introducePlayer():
@@ -51,7 +50,6 @@ def introducePlayer():
             m.Map().genLeft()
         elif path == "2":
             m.Map().genRight()
-            print("This path will be implemented in the future")
             continue
         else:
             print("\nIncorrect Input! A number is required")
@@ -71,6 +69,7 @@ def gameplay():
 
 def actionMenu(currentRoom):
     inRoom = True
+    searchedRoom = False
     while inRoom:
         print("What would you like to do?")
         print("1. Look around")
@@ -78,7 +77,11 @@ def actionMenu(currentRoom):
         print("3. Open the shop")
         choice = input(">")
         if choice == "1":
-            currentRoom.search()
+            if not searchedRoom:
+                currentRoom.search()
+                searchedRoom = True
+            else:
+                print("You have already searched this room!")
 
         elif choice == "2":
             if currentRoom.room != "Boss":
