@@ -17,34 +17,34 @@ mapLayout = []
 # In empty rooms player will have a medium chance of consumables, no chance treasure, no chance weapons
 # In dungeon rooms player will have a high chance of weapons, normal chance consumables, low chance weapons
 
-def percentChance(num):
+def percentChance(num, type=True, returner=False):
   randomNum = r.randint(0, 100)
-  if num < randomNum:
-    return True
+  if num <= randomNum:
+    return type
   else:
-    return False
+    return returner
 
 
 class Map:
-    def __init__(self, difficulty=1):
+    def __init__(self, difficulty=10):
         self.difficulty = difficulty
-        self.maps = [Dungeon(), Empty(), Treasure()]
 
     def genLeft(self):
         global mapLayout
         mapLayout.append(Treasure())
         for i in range(8 + self.difficulty):
-            room = r.randint(1, 2)
-            mapLayout.append(self.maps[room])
+            room = percentChance(70, Treasure(), Empty())
+            mapLayout.append(room)
         mapLayout.append(Boss())
+        print(mapLayout)
         return mapLayout
 
     def genRight(self):
         global mapLayout
         mapLayout.append(Dungeon())
         for i in range(8 + self.difficulty):
-            room = r.randint(0, 1)
-            mapLayout.append(self.maps[room])
+            room = percentChance(70, Dungeon(), Empty())
+            mapLayout.append(room)
         mapLayout.append(Boss())
         return mapLayout
 
@@ -57,16 +57,18 @@ class Rooms:
         gui.actionMenu(self)
 
     def search(self):
+      r.shuffle(items.weaponz)
+      r.shuffle(items.consumables)
+      r.shuffle(items.treasure)
       if self.room == "Dungeon":
-        loot = []
-        weaponCount = [percentChance(50), percentChance(50)]
-        consumeCount = percentChance(50)
-        treasureChance = percentChance(30)
-        if weaponCount[0]:
-          pass
-          
-          
-      
+        self.loot = [percentChance(50, r.choice(items.weaponz)), percentChance(50, r.choice(items.weaponz)), percentChance(50, r.choice(items.consumables)), percentChance(30, r.choice(items.treasure))] 
+        
+      elif self.room == "Treasure":
+        self.loot = [percentChance(50, r.choice(items.treasure)), percentChance(50, r.choice(items.treasure)), percentChance(50, r.choice(items.consumables)), percentChance(30, r.choice(items.weaponz))] 
+
+      elif self.room == "Empty":
+        self.loot = [percentChance(50, r.choice(items.consumables)), percentChance(10, r.choice(items.treasure)), percentChance(10, r.choice(items.weaponz))] 
+        
     def __repr__(self):
         return str(self.room)
 
@@ -91,27 +93,6 @@ class Treasure(Rooms):
         print(f"You have entered a {self.room} room")
         super().enter()
 
-    def search(self):
-        pickup = True
-        print("You have found treasure!")
-        print("It happens to be a weapon! (probably because im too lazy to implement anything else")
-        while pickup:
-            print("Would you like to pick it up? (y/n)")
-            pick = input(">")
-
-            if pick.lower() == "y":
-                print("Item picked up")
-                pickup = False
-
-
-            elif pick.lower() == "n":
-                print("Item not picked up.")
-                pickup = False
-
-
-            else:
-                print("Invalid input\n")
-
 
 class Boss(Rooms):
     def __init__(self):
@@ -133,12 +114,3 @@ class Empty(Rooms):
         super().enter()
 
 
-class Shop:
-    def __init__(self):
-        os.system("clear")
-        t.sleep(0.1)
-        print("Welcome to the shop!")
-        t.sleep(1)
-        print("What would you like to buy?")
-        print("This feature will be implemented later")
-        t.sleep(2)

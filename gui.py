@@ -4,7 +4,22 @@ import time as t
 import map
 import map as m
 
-header = "The Dragon Trail".center(50, " ")
+header = "{ Dragon Trail }".center(50, "~") +"\n"
+
+class Shop:
+    def __init__(self):
+      os.system("clear")
+      t.sleep(0.1)
+      print(header)
+      print("Welcome to the shop!")
+      t.sleep(1)
+      inShop = True
+      while inShop:
+        print(header)
+        print("What would you like to buy?")
+        print("This feature will be implemented later")
+        t.sleep(2)
+
 
 
 def introducePlayer():
@@ -47,8 +62,12 @@ def introducePlayer():
 
 def gameplay():
     for i in map.mapLayout:
+        input("Press ENTER to continue")
+        os.system("clear")
+        t.sleep(0.1)
+        print(header)
         i.enter()
-
+  
 
 def actionMenu(currentRoom):
     inRoom = True
@@ -62,8 +81,15 @@ def actionMenu(currentRoom):
             currentRoom.search()
 
         elif choice == "2":
-            pass
+          if currentRoom.room != "Boss":
+            inRoom = False
+          else:
+            os.system("clear")
+            t.sleep(0.1)
+            print(header)
+            print("You cannot move forward! You must fight the boss :D")
 
 
         elif choice == "3":
-            pass
+            Shop()
+

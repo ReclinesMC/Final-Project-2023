@@ -1,4 +1,4 @@
-import weapons
+import weapons as w
 
 # Coins are used to buy items from the shop
 # Pearls are used to buy rare items from the shop
@@ -72,8 +72,20 @@ class Pepperoni:
     return "Gives 10 HP"
     
   def __repr__(self):
-    return "A delicious snack"
+    return "Pepperoni"
 
-weaponz = [weapons.CrystalBall(), weapons.AngryMushroom(), weapons.Kitten(), weapons.Pencil()]
-consumables = [HealthPot(), StrengthPot(), CookedOstrich(), Pepperoni()]
-treasure = [Coin(), Pearl(), Star(), Ruby()]
+
+weaponz = [w.CrystalBall(), w.CrystalBall(), w.CrystalBall(), w.CrystalBall(), w.AngryMushroom(), w.AngryMushroom(), w.AngryMushroom(), w.AngryMushroom(), w.AngryMushroom(), w.AngryMushroom(), w.AngryMushroom(), w.AngryMushroom(), w.Kitten(), w.Kitten(), w.Kitten(), w.Kitten(), w.Kitten(), w.Kitten(), w.Kitten(), w.Kitten(), w.Kitten(), w.Kitten(), w.Kitten(), w.Kitten(), w.Kitten(), w.Kitten(), w.Kitten(), w.Kitten(), w.Pencil(), w.Pencil(), w.Pencil(), w.Pencil(), w.Pencil(), w.Pencil(), w.Pencil(), w.Pencil(), w.Pencil(), w.Pencil(), w.Pencil(), w.Pencil(), w.Pencil(), w.Pencil(), w.Pencil(), w.Pencil(), w.Pencil(), w.Pencil(), w.Pencil(), w.Pencil(), w.Pencil(), w.Pencil(), w.Pencil(), w.Pencil(), w.Pencil(), w.Pencil(), w.Pencil(), w.Pencil(), w.Pencil(), w.Pencil(), w.Pencil(), w.Pencil()]    
+    
+consumables = [HealthPot(), HealthPot(), HealthPot(), HealthPot(), StrengthPot(), StrengthPot(), StrengthPot(), StrengthPot(), StrengthPot(), StrengthPot(), StrengthPot(), StrengthPot(), CookedOstrich(), CookedOstrich(), CookedOstrich(), CookedOstrich(), CookedOstrich(), CookedOstrich(), CookedOstrich(), CookedOstrich(), CookedOstrich(), CookedOstrich(), CookedOstrich(), CookedOstrich(), CookedOstrich(), CookedOstrich(), CookedOstrich(), CookedOstrich(), Pepperoni(), Pepperoni(), Pepperoni(), Pepperoni(), Pepperoni(), Pepperoni(), Pepperoni(), Pepperoni(), Pepperoni(), Pepperoni(), Pepperoni(), Pepperoni(), Pepperoni(), Pepperoni(), Pepperoni(), Pepperoni(), Pepperoni(), Pepperoni(), Pepperoni(), Pepperoni(), Pepperoni(), Pepperoni(), Pepperoni(), Pepperoni(), Pepperoni(), Pepperoni(), Pepperoni(), Pepperoni(), Pepperoni(), Pepperoni(), Pepperoni(), Pepperoni()]
+
+treasure = [Pearl(), Pearl(), Pearl(), Pearl(), Star(), Star(), Star(), Star(), Star(), Star(), Star(), Star(), Ruby(), Ruby(), Ruby(), Ruby(), Ruby(), Ruby(), Ruby(), Ruby(), Ruby(), Ruby(), Ruby(), Ruby(), Ruby(), Ruby(), Ruby(), Ruby(), Coin(), Coin(), Coin(), Coin(), Coin(), Coin(), Coin(), Coin(), Coin(), Coin(), Coin(), Coin(), Coin(), Coin(), Coin(), Coin(), Coin(), Coin(), Coin(), Coin(), Coin(), Coin(), Coin(), Coin(), Coin(), Coin(), Coin(), Coin(), Coin(), Coin(), Coin(), Coin()]
+
+
+# lootGenerator= []
+# amount = 2
+# for i in treasure:
+#   amount *= 2
+#   for b in range(amount):
+#     lootGenerator.append(i)
+# print(lootGenerator)

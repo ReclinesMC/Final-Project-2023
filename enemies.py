@@ -3,6 +3,9 @@ class Enemies:
         self.type = type
         self.modifier = modifier
 
+    def startBattle(self):
+      
+
     def __str__(self):
         return str(self.type)
 
